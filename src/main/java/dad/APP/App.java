@@ -17,8 +17,10 @@ public class App extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		control = new Controller();
 		App.primaryStage = primaryStage;
+		Scene scene = new Scene(control.getRoot());
+		scene.getStylesheets().add("/css/calendario.css");
 		primaryStage.setTitle("Calendario");
-		primaryStage.setScene(new Scene(control.getViewRoot()));
+		primaryStage.setScene(scene);
 		primaryStage.getIcons().add(new Image("/images/calendar-64x64.png"));
 		primaryStage.show();
 	}
